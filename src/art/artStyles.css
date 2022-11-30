@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.art--main--container {
+  height: 100%;
+}
+
+.art--top--container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 35px;
+}
+
+.art--title {
+  font-size: 20px;
+  line-height: 23.44px;
+  text-align: center;
+  color: #474b4e;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  /* line-height: 120%; */
+}
+
+.art--back--arrow {
+  position: absolute;
+  left: 5%;
+}
+
+.art--shoppingcart {
+  position: absolute;
+  right: 5%;
+}
+
+.art--middle--container {
+  justify-content: center;
+  /* margin-top: 10%; */
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin-bottom: 20%;
+}
+
+/* ===========================================artCard==================================== */
+.artCard--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 186px;
+  width: 175px;
+  margin-bottom: 15%;
+  border-radius: 9px;
+  border: 1px solid;
+  border-color: #474b4e;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.artCard--top {
+  height: 75%;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  resize: inherit;
+}
+
+.artCard--bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 25%;
+  font-size: 16px;
+  text-align: center;
+  color: #474b4e;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 18.75px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+/* ===========================================artGallery==================================== */
+.art--gallery--middle--container {
+  display: grid;
+  justify-content: space-around;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.individual--art--gallery--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30%;
+  text-decoration: none;
+  color: #474b4e;
+}
+
+.individual--art--gallery--card--image--box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 167px;
+  width: 175px;
+  overflow: hidden;
+}
+
+.individual--art--gallery--card--image {
+  height: 100%;
+}
+
+.individual--art--gallery--card--textbox {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.individual--art--gallery--card--title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+.individual--art--gallery--card--artistName {
+  margin-top: 3%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+.individual--art--gallery--card--price {
+  margin-top: 7%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+/* ===========================================Specific--Artwork--Page==================================== */
+
+.specific--art--gallery--middle--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.specific--art--gallery--image--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 365px;
+  height: 345px;
+  position: relative;
+  overflow: hidden;
+}
+
+.specific--art--gallery--image {
+  /* width: 100%; */
+  height: 100%;
+}
+
+.art--gallery--description--container {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.art--gallery--description--artistname {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+.art--gallery--description--artname {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 23.44px;
+  font-size: 20px;
+  margin-top: 27px;
+}
+
+.art-gallery--description--bulletlists {
+  margin-top: 10px;
+  width: 100%;
+  padding-left: 15px;
+}
+
+.art-gallery--description--bulletlists--text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+.art-gallery--description--artistdescription {
+  margin-top: 29px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.art--gallery--addtocart--container {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+}
+
+.art--gallery--addtocart--container--topsection {
+  display: flex;
+  justify-content: left;
+}
+
+.delivery--icon {
+  margin-right: 15px;
+}
+
+.delivery--details {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+.art--gallery--addtocart--container--bottomsection {
+  margin-top: 31px;
+}
+
+.art--add--to--cart--button {
+  width: 366px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #4c6029;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.art--add--to--cart--text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 23.44px;
+  font-size: 20px;
+  color: #fffbf0;
+}
+
+.art--gallery--horizontal--line {
+  width: 366px;
+  background-color: #6b6b6b;
+  height: 0.5px;
+  margin-bottom: 20px;
+}
+
+.artistpfp--name--box {
+  display: flex;
+  position: relative;
+  height: 75px;
+}
+
+.artistpfp--name--box {
+  margin-bottom: 18px;
+}
+
+.artistpfp {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+.artistpfpMale {
+  position: absolute;
+  width: 51px;
+  height: 44px;
+  top: 15px;
+  left: 10px;
+}
+/* 
+.artistpfpMale {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 2px;
+  left: 2px;
+} */
+
+.artist--description--box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+  justify-content: center;
+}
+
+.artist--description--box--title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+  color: #474b4e;
+  margin-bottom: 6px;
+}
+
+.artist--description--box--name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 16.41px;
+  font-size: 14px;
+  color: #474b4e;
+}
+
+.artistpfp--biography--box {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 14px;
+  color: #474b4e;
+  margin-bottom: 18px;
+}
+
+.art--gallery--horizontal--line--2 {
+  width: 366px;
+  background-color: #6b6b6b;
+  height: 0.5px;
+  margin-bottom: 30px;
+}
+
+.other--artworks--container--title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 16.41px;
+  font-size: 14px;
+  color: #474b4e;
+  margin-bottom: 30px;
+}
+
+.other--artworks--container--for--artworks {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 50%);
+  margin-bottom: 133px;
+  justify-content: space-around;
+}
+
+.other--artworks--individual--container {
+  cursor: pointer;
+}
+
+.other--artworks--image--box {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 167px;
+  width: 175px;
+  overflow: hidden;
+}
+
+.other--artworks--image {
+  height: 100%;
+}
+
+.other--artworks--textbox {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.other--artworks--textbox--title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+.other--artworks--textbox--artistName {
+  margin-top: 3%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+}
+
+.other--artworks--textbox--price {
+  margin-top: 7%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 16.41px;
+  font-size: 14px;
+}
