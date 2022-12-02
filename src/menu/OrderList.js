@@ -18,7 +18,7 @@ const OrderList = (props) => {
   const [indexEdit, setIndexEdit] = useState();
 
   const handleSubmitOrderClick = () => {
-    let uri = "http://localhost:5006/order/create/";
+    let uri = "https://backend-ne9e.onrender.com/order/create/";
     props.postToOrderDB(uri, props.foodOrder);
 
     props.handleOrderPageChange("OrderSubmission");

@@ -37,7 +37,7 @@ const MenuStateContainer = ({
 
   //========================fetch data from DB==========================
   // const fetchMenuItems = async () => {
-  //   const res = await fetch("http://127.0.0.1:5006/menu/allmenuitems");
+  //   const res = await fetch("https://backend-ne9e.onrender.com/menu/allmenuitems");
   //   const data = await res.json();
   //   setFullMenu(data);
   // };

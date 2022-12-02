@@ -45,7 +45,9 @@ function App() {
 
   //========================menu - fetch data from DB==========================
   const fetchMenuItems = async () => {
-    const res = await fetch("http://localhost:5006/menu/allmenuitems");
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/menu/allmenuitems"
+    );
     const data = await res.json();
     setFullMenu(data);
   };
@@ -57,13 +59,17 @@ function App() {
 
   //========================fetch data from DB==========================
   const fetchArtData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artwork/allartwork");
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/artwork/allartwork"
+    );
     const data = await res.json();
     return data;
   };
 
   const fetchArtistData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artist/allartist");
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/artist/allartist"
+    );
     const data = await res.json();
     return data;
   };

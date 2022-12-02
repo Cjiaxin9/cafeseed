@@ -30,33 +30,39 @@ const PaymentPage = ({
   console.log({ cartArtDetails });
 
   const updateToSold = async (id) => {
-    const res = await fetch("http://127.0.0.1:5006/artwork/update", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "PATCH",
-      body: JSON.stringify({ id, sold: true }),
-    });
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/artwork/update",
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "PATCH",
+        body: JSON.stringify({ id, sold: true }),
+      }
+    );
   };
 
   const createShippingDB = async () => {
-    const res = await fetch("http://127.0.0.1:5006/shipping/createshipping", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "PUT",
-      body: JSON.stringify({
-        cart: cartArtDetails,
-        name: nameInput,
-        address: addressInput,
-        apartment: apartmentInput,
-        postalCode: postalCodeInput,
-        phone: phoneInput,
-        email: emailInput,
-      }),
-    });
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/shipping/createshipping",
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "PUT",
+        body: JSON.stringify({
+          cart: cartArtDetails,
+          name: nameInput,
+          address: addressInput,
+          apartment: apartmentInput,
+          postalCode: postalCodeInput,
+          phone: phoneInput,
+          email: emailInput,
+        }),
+      }
+    );
   };
 
   const handleMakePayment = async () => {

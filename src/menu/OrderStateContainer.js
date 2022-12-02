@@ -9,7 +9,7 @@ const OrderStateContainer = (props) => {
   const [orderNumber, setOrderNumber] = useState();
 
   const fetchOrderNumber = async () => {
-    const res = await fetch("http://localhost:5006/order/count", {
+    const res = await fetch("https://backend-ne9e.onrender.com/order/count", {
       // Adding method type
       method: "GET",
 

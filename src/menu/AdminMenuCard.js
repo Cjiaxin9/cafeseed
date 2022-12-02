@@ -61,7 +61,7 @@ const AdminMenuCard = (props) => {
   const handleUpdateClick = () => {
     setMenuAdminUpdate(true);
 
-    fetchById("http://localhost:5006/menu/findbyid/" + data._id);
+    fetchById("https://backend-ne9e.onrender.com/menu/findbyid/" + data._id);
   };
 
   const handleSubmitClick = async () => {
@@ -73,7 +73,8 @@ const AdminMenuCard = (props) => {
       tags,
       img: imgUrl,
     };
-    const uri = "http://localhost:5006/menu/updatemenuitem/" + data._id;
+    const uri =
+      "https://backend-ne9e.onrender.com/menu/updatemenuitem/" + data._id;
     const res = await fetch(uri, {
       // Adding method type
       method: "PATCH",
@@ -94,7 +95,7 @@ const AdminMenuCard = (props) => {
   };
 
   // const handleUpdate = () => {
-  //   fetch("http://127.0.0.1:5006/menu/updatemenuitem", {
+  //   fetch("https://backend-ne9e.onrender.com/menu/updatemenuitem", {
   //     method: "PATCH",
   //     body: {
   //       id: dish._id
@@ -108,7 +109,7 @@ const AdminMenuCard = (props) => {
 
   const handleDeleteClick = async () => {
     const id = data._id;
-    await fetch("http://127.0.0.1:5006/menu/deletemenuitem", {
+    await fetch("https://backend-ne9e.onrender.com/menu/deletemenuitem", {
       method: "DELETE",
       body: JSON.stringify({ _id: id }),
       headers: {

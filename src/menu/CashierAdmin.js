@@ -5,7 +5,7 @@ const CashierAdmin = () => {
   // fetch all orders
   const [orders, setOrders] = useState([]);
   const fetchOrders = async () => {
-    const res = await fetch("http://localhost:5006/order/");
+    const res = await fetch("https://backend-ne9e.onrender.com/order/");
     const data = await res.json();
     setOrders(data);
   };
@@ -16,26 +16,32 @@ const CashierAdmin = () => {
 
   // change status to paid
   const handlePaid = async () => {
-    await fetch("http://localhost:5006/order/update/" + orders[0]._id, {
-      method: "PATCH",
-      body: JSON.stringify({
-        paid: true,
-        fulfilled: false,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    });
+    await fetch(
+      "https://backend-ne9e.onrender.com/order/update/" + orders[0]._id,
+      {
+        method: "PATCH",
+        body: JSON.stringify({
+          paid: true,
+          fulfilled: false,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    );
   };
 
   // change status to fulfilled
   const handleFulfilled = async () => {
-    await fetch("http://localhost:5006/order/delete/" + orders[0]._id, {
-      method: "DELETE",
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    });
+    await fetch(
+      "https://backend-ne9e.onrender.com/order/delete/" + orders[0]._id,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    );
   };
 
   return (

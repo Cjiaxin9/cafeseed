@@ -53,20 +53,23 @@ const MenuAdmin = (props) => {
   };
 
   const handleCreate = async () => {
-    const res = await fetch("http://localhost:5006/menu/newmenuitem", {
-      method: "PUT",
-      body: JSON.stringify({
-        name,
-        price: parseInt(price),
-        category,
-        tags,
-        description,
-        img: imgUrl,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    });
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/menu/newmenuitem",
+      {
+        method: "PUT",
+        body: JSON.stringify({
+          name,
+          price: parseInt(price),
+          category,
+          tags,
+          description,
+          img: imgUrl,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    );
 
     const createdData = await res.json();
     console.log(createdData);
@@ -86,7 +89,8 @@ const MenuAdmin = (props) => {
 
   const fetchCategoryItems = async () => {
     const res = await fetch(
-      "http://localhost:5006/menu/findbycategory/" + props.catSelected
+      "https://backend-ne9e.onrender.com/menu/findbycategory/" +
+        props.catSelected
     );
     const data = await res.json();
     setDishes(data);
