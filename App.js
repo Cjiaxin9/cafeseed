@@ -59,13 +59,17 @@ function App() {
 
   //========================fetch data from DB==========================
   const fetchArtData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artwork/allartwork");
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/artwork/allartwork"
+    );
     const data = await res.json();
     return data;
   };
 
   const fetchArtistData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artist/allartist");
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/artist/allartist"
+    );
     const data = await res.json();
     return data;
   };
