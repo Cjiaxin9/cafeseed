@@ -14,25 +14,28 @@ const AdminArtwork = ({ ArtData }) => {
   const [sold, setSold] = useState(false);
 
   const updateArtData = async () => {
-    const res = await fetch("http://127.0.0.1:5006/artwork/update", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "PATCH",
-      body: JSON.stringify({
-        id: id,
-        artName: title,
-        description: description,
-        artistName: artistName,
-        category: category,
-        image: image,
-        physicalMaterial: physicalMaterial,
-        physicalSize: physicalSize,
-        price: price,
-        sold: sold,
-      }),
-    });
+    const res = await fetch(
+      "https://backend-ne9e.onrender.com/artwork/update",
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "PATCH",
+        body: JSON.stringify({
+          id: id,
+          artName: title,
+          description: description,
+          artistName: artistName,
+          category: category,
+          image: image,
+          physicalMaterial: physicalMaterial,
+          physicalSize: physicalSize,
+          price: price,
+          sold: sold,
+        }),
+      }
+    );
   };
   const handleChanges = () => {
     updateArtData();
