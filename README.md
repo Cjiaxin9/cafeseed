@@ -20,7 +20,7 @@ Express.js
 MongoDB
 Mongoose
 
-# Github Repositories:
+# Github Repositories: (parent)
 
 Client: https://github.com/twincoders91/seedscafe
 Server: https://github.com/twincoders91/seedscafebackend
